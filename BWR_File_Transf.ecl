@@ -115,14 +115,6 @@ rec3 MyTransf2(RECORDOF(newds) Le) := TRANSFORM
 END;
 
 newds2 := PROJECT(newds,MyTransf2(LEFT));
-ds := newds2(regiao <> 'REGIAO NAO IDENTIFICADA');
 
-layout := RECORD
- ds.regiao;
- ds.ranking_padronizado;
- cnt := COUNT(GROUP);
-END;
 
-RankingCount := SORT(TABLE(ds,layout, regiao, ranking_padronizado), REGIAO, ranking_padronizado);
-
-OUTPUT(RankingCount, NAMED('RankingCount'));
+OUTPUT(newds2,,'~class::proj::out::Empresa_IBGE_Transf',overwrite);

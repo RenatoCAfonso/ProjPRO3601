@@ -1,9 +1,9 @@
 ﻿IMPORT $, Std;
 
 //Dataset apos transform
-ds := $.File_Data_Transf.File;
+// ds := $.File_Data_Transf.File;
 
-ds
+// ds;
 
 //Analises descritivas e bestrecord
 // profileResults := STD.DataPatterns.Profile();
@@ -11,10 +11,16 @@ ds
 //OUTPUT(profileResults, ALL, NAMED('profileResults'));
 //OUTPUT(bestrecord, ALL, NAMED('BestRecord'));
 
+// Constroi indices
+// BUILD ($.File_Data_Transf.IDX_cnpj,OVERWRITE);
+
+
 // tabela para consultas
+// ds2 := newds2(regiao <> 'REGIAO NAO IDENTIFICADA');
+
 // layout := RECORD
- // ds.regiao;
- // ds.ranking_padronizado;
+ // ds2.regiao;
+ // ds2.ranking_padronizado;
  // cnt := COUNT(GROUP);
 // END;
 
