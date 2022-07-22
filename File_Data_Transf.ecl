@@ -17,5 +17,5 @@ EXPORT File_Data_Transf := MODULE
       String8 ranking; 
 	END;
 	EXPORT File := DATASET('~class::proj::out::Empresa_IBGE_transf',Layout,FLAT);
-	EXPORT IDX_cnpj := INDEX(File,{cnpj},{cnpj, razao_social, municipio,  ranking_padronizado},'~CLASS::hmw::KEY::cnpj');
+	EXPORT IDX_cnpj := INDEX(File,{cnpj},{cnpj, razao_social, municipio,  sigla_uf, ranking_padronizado},'~CLASS::hmw::KEY::cnpj');
 END;
